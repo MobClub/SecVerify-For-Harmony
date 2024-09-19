@@ -1,0 +1,48 @@
+{
+  "app": {
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "signRelease",
+        "compatibleSdkVersion": "5.0.0(12)",
+        "buildOption": {
+          "strictMode": {
+            "useNormalizedOHMUrl": true
+          }
+        },
+        //指定HarmonyOS应用/服务目标版本。若没有设置，默认为compatibleSdkVersion
+        "runtimeOS": "HarmonyOS"
+      }
+    ],
+    "signingConfigs": [
+      {
+        "name": "signRelease",
+        "type": "HarmonyOS",
+        "material": {
+          "storePassword": "",
+          "certpath": "",
+          "keyAlias": "",
+          "keyPassword": "",
+          "profile": "",
+          "signAlg": "",
+          "storeFile": ""
+        }
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+
+  ]
+}
